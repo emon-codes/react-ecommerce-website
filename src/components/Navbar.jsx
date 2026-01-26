@@ -1,3 +1,4 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 import { MapPin } from "lucide-react";
 import React from "react";
 import { FaCaretDown } from "react-icons/fa";
@@ -31,17 +32,54 @@ const Navbar = () => {
 
         <nav className="flex flex-row gap-7 items-center">
           <ul className="flex flex-row gap-7 items-center text-lx font-semibold">
-            <NavLink to={'/'} className={({isActive}) => `${isActive ? "border-b-3 transition-all duration-200 ease-in-out border-green-700" : "text-black"} cursor-pointer` } ><li>Home</li></NavLink> 
-            <NavLink to={'/product'} className={({isActive}) => `${isActive ? "border-b-3 transition-all duration-200 ease-in-out border-green-700" : "text-black"} cursor-pointer` }  ><li>Products</li></NavLink> 
-            <NavLink to={'/about'} className={({isActive}) => `${isActive ? "border-b-3 transition-all duration-200 ease-in-out border-green-700" : "text-black"} cursor-pointer` }  > <li>About</li></NavLink>
-            <NavLink to={'/contact'} className={({isActive}) => `${isActive ? "border-b-3 transition-all duration-200 ease-in-out border-green-700" : "text-black"} cursor-pointer` }  ><li>Contact Us</li></NavLink> 
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                `${isActive ? "border-b-3 transition-all duration-200 ease-in-out border-green-700" : "text-black"} cursor-pointer`
+              }
+            >
+              <li>Home</li>
+            </NavLink>
+            <NavLink
+              to={"/product"}
+              className={({ isActive }) =>
+                `${isActive ? "border-b-3 transition-all duration-200 ease-in-out border-green-700" : "text-black"} cursor-pointer`
+              }
+            >
+              <li>Products</li>
+            </NavLink>
+            <NavLink
+              to={"/about"}
+              className={({ isActive }) =>
+                `${isActive ? "border-b-3 transition-all duration-200 ease-in-out border-green-700" : "text-black"} cursor-pointer`
+              }
+            >
+              {" "}
+              <li>About</li>
+            </NavLink>
+            <NavLink
+              to={"/contact"}
+              className={({ isActive }) =>
+                `${isActive ? "border-b-3 transition-all duration-200 ease-in-out border-green-700" : "text-black"} cursor-pointer`
+              }
+            >
+              <li>Contact Us</li>
+            </NavLink>
           </ul>
-          <Link to={'/cart'} className="relative">
+          <Link to={"/cart"} className="relative">
             <IoCartOutline className="h-7 w-7" />
-            <span className="bg-green-600 px-2 rounded-full absolute -top-3 -right-3 text-white">0</span>
-          
+            <span className="bg-green-600 px-2 rounded-full absolute -top-3 -right-3 text-white">
+              0
+            </span>
           </Link>
-
+          <div>
+            <SignedOut>
+              <SignInButton className="bg-red-600 text-white px-3 py-1 cursor-pointer rounded" />
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+          </div>
         </nav>
       </div>
     </div>
