@@ -14,8 +14,9 @@ export const DataProvider = ({children}) => {
         try {
     
             const res = await axios.get('https://fakestoreapi.com/products')
-    
-console.log(res)
+     setData(res.data)
+            console.log(res)
+        
 
 
 } catch (error) {
