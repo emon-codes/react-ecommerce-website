@@ -64,7 +64,7 @@ var settings = {
                   <button className="bg-red-500 text-black px-4 py-1 cursor-pointer rounded">Shop Now</button>
                 </div>
                 <div>
-                  <img src={items.image} alt={items.title} className="max-w-[550px]  hover:scale-105 transition-all shadow" />
+                  <img src={items.image} alt={items.title} className="max-w-[500px]  hover:scale-105 transition-all shadow" />
                 </div>
               </div>
             </div>
