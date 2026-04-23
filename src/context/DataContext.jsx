@@ -24,13 +24,8 @@ export const DataProvider = ({children}) => {
     
 }
 
-
     }
-    
-
-
-
-
+   
 
     return <DataContext.Provider value={{data, setData, fetchAllProducts}}>
 {children}
