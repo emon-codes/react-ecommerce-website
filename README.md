@@ -17,7 +17,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 # React Ecommerce Website
 
-A modern ecommerce website built with React, Vite, Tailwind CSS.
+<!-- A modern ecommerce website built with React, Vite, Tailwind CSS. -->
 
 ## Features
 
